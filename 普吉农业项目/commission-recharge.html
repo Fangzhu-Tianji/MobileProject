@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+
+        .balance-commission-content {
+            position: absolute;
+            left: 0;
+            top: .96rem;
+            width: 100%;
+            height: 100%;
+            font-size: .28rem;
+            background-color: #f5f5f5;
+            /*opacity: .5;*/
+            text-align: center;
+            padding-top:.2rem;
+        }
+
+        .b-r-c-1 {
+            position: relative;
+            margin-top: .3rem;
+            height: 1.2rem;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            /*text-align:center;*/
+            line-height: 1.2rem;
+            text-align: left;
+            background-color: #fff;
+
+        }
+
+        .b-r-c-2 {
+            padding: .3rem 0 .3rem .3rem;
+            border-bottom: 1px solid #e6e6e6;
+            text-align: left;
+
+        }
+
+        .b-r-c-2 span {
+        }
+
+        .b-r-c-3 {
+            padding: .3rem 0 .3rem .3rem;
+            border-bottom: 1px solid #e6e6e6;
+            text-align: left;
+            background-color: #fff;
+
+        }
+
+        .balance-commission-number {
+            /*height: 1.2rem;*/
+            font-size: .3rem;
+            border: none;
+            outline: none;
+            padding-left: .2rem;
+        }
+
+        .b-r-c-enter i {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .b-r-c-enter {
+            position: absolute;
+            right: .3rem;
+            top: .45rem;
+            width: .32rem;
+            height: .24rem;
+        }
+
+        .balance-commission-content-img {
+            width: .7rem;
+            height: .7rem;
+            /*padding-top: .32rem;*/
+            padding-left: .3rem;
+            padding-right: .3rem;
+            vertical-align: middle;
+        }
+
+        .button-balance-commission {
+            /*background-color: #e6e6e6;*/
+            margin-top: .6rem;
+        }
+
+        /* 余额充值 支付密码 */
+        .c-choice-pay-detail-password {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 9rem;
+            width: 100%;
+            font-size: .32rem;
+            background-color: #f8f8f8;
+            opacity: .9;
+            z-index:1001;
+
+            text-align:center;
+
+        }
+
+        .c-m-c-pay-detail {
+            width: 100%;
+            height: .96rem;
+            /*background-color: #aaa;*/
+            border-bottom: 1px solid #15ae67;
+            text-align: center;
+            font-size: .42rem;
+        }
+
+        .c-m-c-detail-title {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .c-m-c-pay-detail i {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .c-m-c-left-close-password {
+            position: absolute;
+            left: .01rem;
+            vertical-align: middle;
+            width: .22rem;
+            height: .42rem;
+            padding: .3rem;
+        }
+        .c-choice-p-input-container{
+            text-align:center;
+        }
+        .c-choice-p-input-container a{
+            margin-top:.4rem;
+            text-decoration:none;
+            color:#6dbd78;
+            float:right;
+            margin-right:.4rem;
+
+        }
+
+        .c-choice-pay-password-input{
+            width:6.5rem;
+            height:1rem;
+            border:1px solid #6dbd78;
+            border-radius:.05rem;
+            margin-top:.7rem;
+            font-size:.32rem;
+            text-indent:.2rem;
+        }
+
+        .commission-password-button{
+            margin-top:1rem;
+        }
+
+
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="my-balance.html" class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">转入余额</span><i></i>
+</div>
+
+<div class="balance-commission-content">
+    <div class="b-r-c-3"><label>金额</label> <input class="balance-commission-number" type="text" placeholder="请输入充值金额">
+    </div>
+    <div class="b-r-c-2"><span>本次最多可转入101.00元</span></div>
+    <input class="button-lg button-balance-commission" type="button" value="下一步">
+</div>
+
+<!--遮罩-->
+<div class="overlay">
+
+</div>
+
+<!--余额充值 支付密码-->
+<div class="c-choice-pay-detail-password">
+    <div class="c-m-c-pay-detail">
+        <img src="img/back-green.png" class= "c-m-c-left-close-password">
+        <span class="c-m-c-detail-title">输入密码</span><i></i>
+    </div>
+
+    <div class="c-choice-p-input-container">
+        <input type="text" class="c-choice-pay-password-input">
+        <div>
+            <a href="#">忘记密码?</a>
+        </div>
+    </div>
+
+    <input class="button-lg commission-password-button" type="button" value="确定">
+</div>
+
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //点击 下一步 显示 输入密码页面
+
+        $('.button-balance-commission').tap(function () {
+            $('.overlay').show()
+            $('.c-choice-pay-detail-password').show()
+        })
+
+        //点击 返回三角号 显示转入余额页面
+        $('.c-m-c-left-close-password').tap(function () {
+            $('.overlay').hide()
+            $('.c-choice-pay-detail-password').hide()
+        })
+
+        //点击确认按钮
+        $('.commission-password-button').tap(function () {
+
+
+
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

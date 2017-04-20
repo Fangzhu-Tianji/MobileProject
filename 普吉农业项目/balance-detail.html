@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+        .balance-detail-content {
+            position: absolute;
+            top: .96rem;
+            left: 0;
+            width: 100%;
+            /*padding-top: .2rem;*/
+            font-size: .28rem;
+        }
+
+        .balance-detail {
+            list-style-type: none;
+        }
+
+        .balance-detail-li {
+            position:relative;
+            height: 1.05rem;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .balance-detail-title{
+            position:absolute;
+            left: .2rem;
+            top: .2rem;
+            font-size:.26rem;
+            font-weight:bold;
+        }
+
+        .balance-detail-balance-title,
+        .balance-detail-balance-time{
+            font-size:.2rem;
+            color:#aaa;
+        }
+
+        .balance-detail-balance-title{
+            position: absolute;
+            left: .2rem;
+            bottom: .2rem;
+        }
+
+        .balance-detail-balance-time{
+            position:absolute;
+            top: .2rem;
+            right: .2rem;
+        }
+
+
+
+        .balance-detail-item{
+            position:absolute;
+            right:.2rem;
+            bottom:.2rem;
+            font-size:.26rem;
+            font-weight:bold;
+            color: #6dbd78;
+
+        }
+
+        .balance-detail-item span{
+            font-size:.26rem;
+            font-weight:bold;
+            color: #6dbd78;
+        }
+
+
+
+
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="my-balance.html" class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">余额明细</span><i></i>
+</div>
+
+<div class="balance-detail-content">
+    <ul class="balance-detail">
+        <li class="balance-detail-li"><span class="balance-detail-title">在线支付</span> <span class="balance-detail-balance-title">余额：<span
+                class="balance-detail-balance">1967.00</span></span> <span
+                class="balance-detail-balance-time">2016-09-05 07:48</span> <span class="balance-detail-item">-49.50 <span>元</span> </span></li>
+        <li class="balance-detail-li"><span class="balance-detail-title">佣金转入</span> <span class="balance-detail-balance-title">余额：<span
+                class="balance-detail-balance">2016.50</span></span> <span
+                class="balance-detail-balance-time">2016-09-05 07:16</span> <span class="balance-detail-item">+16.50 <span>元</span></span></li>
+    </ul>
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

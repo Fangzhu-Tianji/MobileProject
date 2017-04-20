@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+
+        /*!*遮罩*!*/
+        /*.overlay {*/
+            /*display: none;*/
+            /*!*display: block;*!*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*right: 0;*/
+            /*left: 0;*/
+            /*bottom: 0;*/
+            /*background-color: #f8f8f8;*/
+            /*opacity: 0.3;*/
+            /*z-index: 1000;*/
+        /*}*/
+
+
+        .content-member {
+            position: absolute;
+            left: 0;
+            top: .96rem;
+            width: 100%;
+        }
+
+        .content-member .member-upgrade {
+            font-size: .26rem;
+            text-align: center;
+            padding-top: .4rem;
+        }
+
+        .content-member .member-upgrade span {
+            float: left;
+            margin-left: 1rem;
+            display: inline-block;
+        }
+
+        .member-ul {
+            clear: both;
+        }
+
+        .member-li {
+            position:relative;
+            display: inline-block;
+            margin-top: .4rem;
+            margin-bottom: .4rem;
+            text-align: center;
+            width: 3.9rem;
+            height: .75rem;
+            border: 1px solid #6dbd78;
+            line-height: .75rem;
+        }
+
+        .m-l-gouxuan{
+            display:none;
+            position:absolute;
+            right: 0;
+            bottom: 0;
+            width:.5rem;
+            height:.34rem;
+        }
+
+        .m-l-gouxuan-active{
+            display: block;
+        }
+
+        .li-active {
+            border: 2px solid #15ae67;
+            /*border:1px solid blue;*/
+        }
+
+        .content-member .member-upgrade .confirm-button {
+            text-align: center;
+            width: 3.9rem;
+            height: .75rem;
+            background-color: #15ae67;
+            border-radius: .2rem;
+            border: none;
+            color: #fff;
+            outline: none;
+            /*cursor:pointer;*/
+        }
+
+
+        /*付款详情*/
+        .choice-pay-detail {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 9rem;
+            width: 100%;
+            font-size: .32rem;
+            background-color: #f8f8f8;
+            opacity: .9;
+            z-index:1001;
+        }
+
+        .m-c-pay-detail {
+            width: 100%;
+            height: .96rem;
+            /*background-color: #aaa;*/
+            border-bottom: 1px solid #15ae67;
+            text-align: center;
+            font-size: .42rem;
+        }
+
+        .m-c-pay-detail i {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .m-c-left-close {
+            position: absolute;
+            left: .01rem;
+            vertical-align: middle;
+            width: .42rem;
+            height: .42rem;
+            padding: .3rem;
+        }
+
+        .m-c-detail-title {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .m-c-detail-list,
+        .m-c-detail-add {
+            list-style-type: none;
+            padding: 0 .3rem 0 .3rem;
+        }
+
+        .m-c-pay-member{
+            margin-left:1rem;
+        }
+
+        .m-c-pay-choice{
+            /*margin-left: 4rem;*/
+            /*background-color: #1ad1b9;*/
+            float:right;
+            margin-right:.5rem;
+        }
+        .m-c-pay-number{
+            margin-left: 3.8rem;
+        }
+
+
+        .m-c-detail-left-i {
+            vertical-align: middle;
+            width: .7rem;
+            height: .7rem;
+            padding-right: .32rem;
+        }
+
+        .m-c-detail-l {
+            height: 1.2rem;
+            border-bottom: 1px solid #aaa;
+            line-height: 1.2rem;
+        }
+
+        .m-c-detail-mark{
+            position:absolute;
+            right: -.1rem;
+            top:.45rem;
+            width: .32rem;
+            height: .24rem;
+            /*float: right;*/
+            /*margin-top: .45rem;*/
+            /*margin-right:4rem;*/
+            /*background-color: #10aaef;*/
+        }
+
+        .choice-pay-detail-button{
+            position:absolute;
+            left:.85rem;
+            bottom: .4rem;
+
+        }
+
+
+
+
+        /*选择支付方式*/
+        .choice-pay {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: .32rem;
+            background-color: #f8f8f8;
+            opacity: .9;
+            z-index:1001;
+
+        }
+
+        .m-c-pay {
+            width: 100%;
+            height: .96rem;
+            /*background-color: #aaa;*/
+            border-bottom: 1px solid #15ae67;
+            text-align: center;
+            font-size: .42rem;
+        }
+
+        .m-c-pay i {
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        .m-c-left {
+            position: absolute;
+            left: .01rem;
+            vertical-align: middle;
+            width: .22rem;
+            height: .42rem;
+            padding: .3rem;
+        }
+
+        .m-c-title {
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .m-c-list,
+        .m-c-add {
+            list-style-type: none;
+            padding: 0 .3rem 0 .3rem;
+        }
+
+        .m-c-left-i {
+            vertical-align: middle;
+            width: .7rem;
+            height: .7rem;
+            padding-right: .32rem;
+        }
+
+        .m-c-l {
+            height: 1.2rem;
+            border-bottom: 1px solid #aaa;
+            line-height: 1.2rem;
+        }
+
+        .m-c-mark, .m-c-enter {
+            width: .32rem;
+            height: .24rem;
+            float: right;
+            margin-top: .45rem;
+        }
+
+        .m-c-mark{
+            display: none;
+        }
+        .m-c-mark-active{
+            display:block;
+        }
+
+
+        /* 会员升级 支付密码 */
+        .choice-pay-detail-password {
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 9rem;
+            width: 100%;
+            font-size: .32rem;
+            background-color: #f8f8f8;
+            opacity: .9;
+            z-index:1001;
+
+        }
+
+        .m-c-left-close-password {
+            position: absolute;
+            left: .01rem;
+            vertical-align: middle;
+            width: .22rem;
+            height: .42rem;
+            padding: .3rem;
+        }
+        .choice-p-input-container{
+            text-align:center;
+        }
+        .choice-p-input-container a{
+            margin-top:.4rem;
+            text-decoration:none;
+            color:#6dbd78;
+            float:right;
+            margin-right:.4rem;
+
+        }
+
+        .choice-pay-password-input{
+            width:6.5rem;
+            height:1rem;
+            border:1px solid #6dbd78;
+            border-radius:.05rem;
+            margin-top:.7rem;
+        }
+
+
+    </style>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="person-login.html"><img src="img/back.png" class="h-top-left "></a>
+    <span class="h-top-title">会员升级</span><i></i>
+</div>
+
+<div class="content-member">
+    <div class="member-upgrade">
+        <span>请选择:</span>
+        <ul class="member-ul">
+            <li class="member-li" data-index="0">银卡会员(1000元) <img class="m-l-gouxuan" src="img/gouxuan.png"> </li>
+            <li class="member-li" data-index="1"> 金卡会员(2000元) <img class="m-l-gouxuan" src="img/gouxuan.png"> </li>
+            <li class="member-li li-active" data-index="2">钻卡会员(10000元) <img class="m-l-gouxuan m-l-gouxuan-active" src="img/gouxuan.png"> </li>
+        </ul>
+        <input class="confirm-button" type="button" value="确认升级">
+    </div>
+</div>
+
+<div class="footer">
+    <ul>
+        <li><a href=""><img src="img/home-gray.png"><span>首页</span></a></li>
+        <li><a href=""><img src="img/message-gray.png"><span>信息</span></a></li>
+        <li><a href=""><img src="img/shopping-cart-gray.png"><span>购物车</span></a></li>
+        <li><a href=""><img src="img/person-light.png"><span>我的</span></a></li>
+    </ul>
+</div>
+
+
+<!--遮罩-->
+<div class="m-u-overlay overlay">
+
+</div>
+
+<!--付款详情-->
+<div class="choice-pay-detail">
+    <div class="m-c-pay-detail">
+        <a class=""><img src="img/close.png" class= "m-c-left-close"></a>
+        <span class="m-c-detail-title">付款详情</span><i></i>
+    </div>
+    <ul class="m-c-detail-list">
+        <li class="m-c-detail-l"><span>订单信息</span> <span class="m-c-pay-member">升级钻卡会员</span></li>
+        <li class="m-c-detail-l m-c-detail-pay" style="position:relative;"><span>付款方式</span> <span class="m-c-pay-choice">支付宝</span><img class="m-c-detail-mark"
+                                                                 src="img/enter.png" alt=""></li>
+        <li class="m-c-detail-l"><span>需付款</span> <span class="m-c-pay-number">10000.00元</span></li>
+    </ul>
+
+    <input class="button-lg choice-pay-detail-button" type="button" value="确认付款">
+
+</div>
+
+
+
+<!--选择支付方式-->
+<div class="choice-pay">
+    <div class="m-c-pay">
+        <a class=""><img src="img/back-green.png" class="m-c-left m-c-left-back"></a>
+        <span class="m-c-title">选择付款方式</span><i></i>
+    </div>
+
+    <ul class="m-c-list">
+        <li class="m-c-l" data-index="0"><img class="m-c-left-i " src="img/zhifubao.png" alt=""><span>支付宝</span><img
+                class="m-c-mark m-c-mark-active" src="img/duigou.png" alt=""></li>
+        <li class="m-c-l" data-index="1"><img class="m-c-left-i " src="img/weixinzhifu.png" alt=""><span>微信支付</span><img
+                class="m-c-mark" src="img/duigou.png" alt=""></li>
+        <li class="m-c-l" data-index="2"><img class="m-c-left-i " src="img/jiansheyinhang.png"
+                               alt=""><span>中国建设银行储蓄卡(5319)</span><img class="m-c-mark"
+                                                                                     src="img/duigou.png" alt=""></li>
+        <li class="m-c-l" data-index="3"><img class="m-c-left-i " src="img/gongshang.png"
+                               alt=""><span>中国工商银行储蓄卡(0662)</span><img class="m-c-mark"
+                                                                                     src="img/duigou.png" alt=""></li>
+    </ul>
+    <ul class="m-c-add">
+        <li class="m-c-l"><span>使用新卡付款</span><img class="m-c-enter" src="img/enter.png" alt=""></li>
+        <li class="m-c-l"><img class="m-c-left-i " src="img/renmb.png" alt=""><span>我的金额</span><span>金额不足</span></li>
+    </ul>
+
+</div>
+
+<!--会员升级 支付密码-->
+<div class="choice-pay-detail-password">
+    <div class="m-c-pay-detail">
+        <img src="img/back-green.png" class= "m-c-left-close-password">
+        <span class="m-c-detail-title">输入密码</span><i></i>
+    </div>
+
+    <div class="choice-p-input-container">
+        <input type="text" class="choice-pay-password-input">
+        <div>
+            <a href="#">忘记密码?</a>
+        </div>
+    </div>
+    <!--<input class="button-lg choice-pay-detail-button" type="button" value="确认付款">-->
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //点击li选择会员级别
+        $('.member-li').tap(function (event) {
+            $(this).addClass('li-active');
+            $(this).children().show();
+            $(this).siblings().removeClass('li-active').children().hide();
+
+            console.log($(this).index())
+
+            console.log($(this).attr('data-index'))
+
+            //填充付款详情内 订单信息 及 需付款金额
+            if($(this).attr('data-index')== 0 ){
+                $('.m-c-pay-member').text('升级银卡会员')
+                $('.m-c-pay-number').text('1000.00元')
+            }else if($(this).attr('data-index')== 1){
+                $('.m-c-pay-member').text('升级金卡会员')
+                $('.m-c-pay-number').text('2000.00元')
+            }else if($(this).attr('data-index')== 2){
+                $('.m-c-pay-member').text('升级钻卡会员')
+                $('.m-c-pay-number').text('10000.00元')
+            }
+
+
+        })
+
+
+        // 点击 确认升级按钮 显示 付款详情
+        $('.confirm-button').tap(function (event) {
+            $('.m-u-overlay').show();
+            $('.choice-pay-detail').show();
+
+            if($('.member-li').hasClass('li-active')){
+//                console.log($('.member-li').find('li-active').index())
+//                $('.member-li').find('li-active').css('background','red')
+
+
+            }else{
+
+            }
+
+
+        })
+
+        // 点击关闭按钮 关闭 付款详情
+        $('.m-c-left-close').tap(function (event) {
+            $('.choice-pay-detail').hide();
+            $('.m-u-overlay').hide();
+        })
+
+        // 点击 付款方式列表 显示 选择付款方式
+        $('.m-c-detail-pay').tap(function (event) {
+            $('.choice-pay-detail').hide();
+            $('.m-u-overlay').show();
+            $('.choice-pay').show();
+        })
+
+
+        //付款方式弹出层 点击 列表li 选择付款方式
+        $('.m-c-l').tap(function (event) {
+            $(this).find('.m-c-mark').toggle()
+            $(this).siblings().find('.m-c-mark').hide()
+
+            //填充付款详情内 付款方式
+            console.log($(this).attr('data-index'))
+
+            if($(this).attr('data-index')== 0 ){
+                $('.m-c-pay-choice').text('支付宝')
+            }else if($(this).attr('data-index')== 1){
+                $('.m-c-pay-choice').text('微信支付')
+            }else if($(this).attr('data-index')== 2){
+                $('.m-c-pay-choice').text('中国建设银行储蓄卡(5319)')
+            } else if($(this).attr('data-index')== 2){
+            $('.m-c-pay-choice').text('中国工商银行储蓄卡(0662)')
+            }
+        })
+
+
+        //点击 选择付款方式中返回箭头号 跳转到 付款详情
+        $('.m-c-left-back').tap(function(){
+            $('.choice-pay').hide();
+            $('.choice-pay-detail').show();
+            $('.m-u-overlay').show();
+        })
+
+
+        //点击 确认付款按钮 显示 付款密码页面
+        $('.choice-pay-detail-button').tap(function(){
+            console.log('点击确认按钮')
+            $(this).css('background-color', '#0f804b')
+            $('.choice-pay-detail').hide();
+            $('.m-u-overlay').show();
+            $('.choice-pay-detail-password').show()
+        })
+
+
+        //点击 付款密码页面返回箭头 跳转到 付款详情
+        $('.m-c-left-close-password').tap(function () {
+            console.log('h123')
+            $('.choice-pay-detail-password').hide()
+            $('.choice-pay-detail').show();
+            $('.m-u-overlay').show();
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

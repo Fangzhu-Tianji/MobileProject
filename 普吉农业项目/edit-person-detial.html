@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+        .edit-person-detial{
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            top: .96rem;
+            width:100%;
+            box-sizing: border-box;
+            font-size:.26rem;
+            /*text-align:center;*/
+        }
+
+        .edit-person-img-bg{
+            display:inline-block;
+            width: 1.68rem;
+            height: 1.68rem;
+            background-color: #15ae67;
+            border-radius: .1rem;
+            margin: .4rem .2rem .2rem .75rem ;
+            text-align:center;
+        }
+
+        .edit-person-usr{
+            display:inline-block;
+            box-sizing: border-box;
+            margin-bottom:.2rem;
+            height:.7rem;
+            width: 4.05rem;
+            line-height: .7rem;
+            border:1px solid #e6e6e6;
+            border-radius:.1rem;
+            color:#202020;
+            padding-left:.6rem;
+        }
+
+        .edit-person-usr input{
+            width:1.5rem;
+            margin-left:.2rem;
+            height:.5rem;
+            font-size:.26rem;
+            border:none;
+            outline:none;
+        }
+
+        .edit-person-usr span{
+            margin-left:.6rem;
+            border-right:1px solid #e6e6e6;
+        }
+
+        .edit-person-img-bg img{
+            margin-top:.25rem;
+        }
+
+
+        .person-detial-list{
+            margin-left:.75rem;
+            padding-left:.6rem;
+            box-sizing: border-box;
+            margin-bottom:.2rem;
+            height:.7rem;
+            width: 6rem;
+            line-height: .7rem;
+            border:1px solid #e6e6e6;
+            border-radius:.1rem;
+            color:#202020;
+        }
+
+        .person-detial-list span{
+            margin-left:.6rem;
+            border-right:1px solid #e6e6e6;
+        }
+
+        .person-detial-list input[type=text]{
+            margin-left:.2rem;
+            height:.5rem;
+            font-size:.26rem;
+            border:none;
+            outline:none;
+
+        }
+
+        .sex-radio{
+            margin-left:1rem;
+        }
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a class="" href="person-detial.html"><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">编辑资料</span><i></i>
+    <a class="person-detial-editdone"><img src="img/duigou-bai.png" class="h-top-right"></a>
+
+</div>
+
+<div class="edit-person-detial">
+    <div class="edit-person-img-bg"><img src="img/person-white.png" alt=""></div>
+    <div class="edit-person-usr">用户名<span></span><input type="text"></div>
+    <div class="person-detial-list">姓名<span></span><input type="text"></div>
+    <div class="person-detial-list">性别<span></span><input name="sex" class="sex-radio" type="radio">男<input  name="sex" class="sex-radio" type="radio">女</div>
+    <div class="person-detial-list">职业<span></span><input type="text"></div>
+    <div class="person-detial-list">生日<span></span><input type="text"></div>
+    <div class="person-detial-list">星座<span></span><input type="text"></div>
+    <div class="person-detial-list">年龄<span></span><input type="text"></div>
+    <div class="person-detial-list">地区<span></span><input type="text"></div>
+
+</div>
+
+
+
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function($){
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function(){
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+        $('.person-detial-editdone').tap(function (event) {
+
+
+            //检测输入框，如通过，即跳转
+            window.location.href="person-detial.html"
+
+        })
+
+      
+
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+    .register01-content{
+        position: absolute;
+        left: 0;
+        top:.96rem;
+        /*text-align: center;*/
+        padding-left:.83rem;
+        padding-top:.3rem;
+    }
+
+    .input-common{
+        box-sizing:border-box;
+        width:5.76rem;
+        height:1rem;
+        border:1px solid #6dbd78;
+        border-radius: .05rem;
+        font-size:.32rem;
+    }
+
+        .register01-1{
+            width:.92rem;
+            color:#6dbd78;
+            border:1px solid #6dbd78;
+            border-right:none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+        }
+        .register01-2{
+            width:4.84rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .register01-3{
+            width:3.05rem;
+            margin-right:.38rem;
+
+        }
+        .register01-4{
+            width:2.3rem;
+            color:#6dbd78;
+            background-color: #fff;
+            text-align: center;
+            padding-right:.11rem;
+
+        }
+
+        .register01-nextStep{
+            background-color: #15ae67;
+            font-size:.42rem;
+            color:#fff;
+        }
+
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="my-balance.html" class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">注册</span><i></i>
+</div>
+
+<div class="register01-content">
+    <div>
+        <input  class="input-common register01-1" type="text" value="+86"><input class="input-common register01-2" type="text" placeholder="请输入正确的手机号码">
+    </div>
+    <div>
+        <input class="input-common register01-3" type="text" placeholder="请输入验证码"><input class="input-common register01-4" type="button" value="获取验证码">
+    </div>
+    <a href="register02.html"><input class="input-common register01-nextStep" type="button" value="下一步"></a>
+
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

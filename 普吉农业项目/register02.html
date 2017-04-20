@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+    .register02-content{
+        position: absolute;
+        left: 0;
+        top:.96rem;
+        /*text-align: center;*/
+        padding-left:.83rem;
+        padding-top:.3rem;
+    }
+
+    .register02-span{
+        padding-top:.3rem;
+        padding-left: .2rem;
+        color:#6dbd78;
+        font-size:.26rem;
+    }
+
+    .input-common{
+        box-sizing:border-box;
+        width:5.76rem;
+        height:1rem;
+        border:1px solid #6dbd78;
+        border-radius: .05rem;
+        font-size:.28rem;
+    }
+
+        .register02-1{
+            width:1.50rem;
+            font-size:.28rem;
+            text-align: right;
+            color:#6dbd78;
+            border-right:none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+
+        }
+        .register02-2{
+            width:4.26rem;
+            border-left:none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .register02-nextStep{
+            background-color: #15ae67;
+            font-size:.42rem;
+            color:#fff;
+        }
+
+    .checkbox-info{
+        box-sizing:border-box;
+        width:5.76rem;
+        height:1rem;
+        margin-left:.83rem;
+        padding-top:.28rem;
+        font-size:.26rem;
+
+    }
+    .checkbox-info input{
+        background-color: #6dbd78;
+    }
+
+    .color-info{
+        color:#6dbd78;
+    }
+    .checkbox-2{
+        display:none;
+    }
+
+    .checkbox-2:checked+label{
+        background: url("img/choose.png")no-repeat;
+        display:inline-block;
+        width:.42rem;
+        height:.42rem;
+        background-size:.42rem .42rem;
+        vertical-align: middle;
+
+    }
+
+    .checkbox-2-label{
+        display:inline-block;
+        width:.42rem;
+        height:.42rem;
+        background: url("img/not-choose.png")no-repeat;
+        background-size:.42rem .42rem;
+        vertical-align: middle;
+    }
+
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="my-balance.html" class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">注册</span><i></i>
+</div>
+
+<div class="register02-content">
+    <div>
+        <input  class="input-common register02-1" type="text" value="登录密码："><input class="input-common register02-2" type="text">
+    </div>
+
+    <div>
+        <input  class="input-common register02-1" type="text" value="确认密码："><input class="input-common register02-2" type="text">
+    </div>
+    <div class="register02-span">
+        <span>提示：默认为支付密码</span>
+    </div>
+    <div>
+        <input  class="input-common register02-1" type="text" value="推荐码："><input class="input-common register02-2" type="text" placeholder="请输入推荐人手机号码">
+    </div>
+
+    <a href=""><input class="input-common register02-nextStep" type="button" value="注 册"></a>
+    <div class="checkbox-info">
+        <input class="checkbox-2" type="checkbox" id="checkbox-register-conform">
+        <label class="checkbox-2-label" for="checkbox-register-conform"></label>
+        <span>已认真阅读并同意 <span class="color-info"><<相关协议>></span></span>
+    </div>
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

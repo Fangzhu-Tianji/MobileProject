@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+        .top-person-detial{
+            background-color: #fff;
+            position: absolute;
+            left: 0;
+            top: .96rem;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            height: 2.92rem;
+        }
+        .top-person-member{
+            font-size:.20rem;
+            color:#aaa;
+        }
+
+        .top-person-content{
+            text-align:center;
+            box-sizing:border-box;
+            position: absolute;
+            top: 3.88rem;
+            left: 0;
+            width: 100%;
+            font-size: .26rem;
+            color:#202020;
+        }
+        .top-person-member ul{
+            list-style-type:none;
+            font-size:.26rem;
+        }
+
+        .person-detial-li{
+            text-align:left;
+            padding-left:.3rem;
+            height:.7rem;
+            border-top:1px solid #e6e6e6;
+            line-height: .7rem;
+        }
+
+        .person-detial-li:last-child{
+            border-bottom:1px solid #e6e6e6;
+        }
+
+        .person-detial-li img{
+            float:right;
+            width:.42rem;
+            height:.42rem;
+            padding-top:.135rem;
+            /*vertical-align:middle;*/
+        }
+
+        .edition{
+            margin-left:4rem;
+            font-size:.19rem;
+            color:#e6e6e6;
+        }
+
+        .person-detial-button{
+            margin-top:1rem;
+        }
+
+        .edition-footer{
+            color:#6dbd78;
+            font-size:.19rem;
+        }
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="person-center.html"><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">个人资料</span><i></i>
+</div>
+
+<div class="top top-person-detial">
+    <div class="top-outer">
+        <img src="img/person-white.png" class="top-person">
+    </div>
+    <div class="top-person-member">
+        <span>用户：<span>工藤新一</span></span>
+    </div>
+
+</div>
+
+<div class="top-person-content">
+
+<ul>
+    <li class="person-detial-li"><span>用户名：</span><span>工藤新一</span></li>
+    <li class="person-detial-li"><span>真实姓名：</span><span>马天宇</span></li>
+    <li class="person-detial-li"><span>性别：</span><span>男</span></li>
+    <li class="person-detial-li"><span>职业：</span><span>冰系魔法师</span></li>
+    <li class="person-detial-li"><span>生日：</span><span>1986-07-12</span></li>
+    <li class="person-detial-li"><span>星座：</span><span>巨蟹座</span></li>
+    <li class="person-detial-li"><span>年龄：</span><span>30</span></li>
+    <li class="person-detial-li"><span>地区：</span><span>湖北武汉</span></li>
+</ul>
+<div>
+    <input class="button-lg person-detial-button" type="button" value="编辑资料">
+</div>
+
+</div>
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function($){
+//        alert('Ready to Zepto!')
+
+        //点击 编辑资料 按钮 进入 编辑资料页面
+        $('.person-detial-button').tap(function(){
+
+            
+
+           //检测输入框，如通过，即跳转
+           window.location.href="edit-person-detial.html"
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

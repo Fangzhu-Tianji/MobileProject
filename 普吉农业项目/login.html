@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+
+        .company-logo{
+            margin:1.5rem auto 1.1rem;
+            text-align:center;
+            width:3.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            border:1px solid #6dbd78;
+            border-radius:50%;
+        }
+
+        .company-logo img{
+            width:2.76rem;
+            height:1.35rem;
+            vertical-align:middle;
+
+        }
+
+        .logo-info{
+            font-size:.28rem;
+        }
+
+        .info-input{
+            box-sizing:border-box;
+            width:5.76rem;
+            height:1rem;
+            border:1px solid #6dbd78;
+            border-radius: .05rem;
+            margin-left:.83rem;
+            margin-bottom:.2rem;
+            font-size:.32rem;
+            text-indent:1rem;
+            /*padding-left:2.2rem;*/
+        }
+        .info-input-usr{
+            background: url('img/Login-person.png') no-repeat;
+            background-size:.42rem .42rem;
+            background-position: .2rem center ;
+        }
+        .info-input-pass{
+            background: url('img/Login-Password.png') no-repeat;
+            background-size:.42rem .42rem;
+            background-position:.2rem  center;
+        }
+
+        .password-info{
+            box-sizing:border-box;
+            width:5.76rem;
+            height:1rem;
+            margin-left:.83rem;
+            text-align:center;
+            padding-top:.28rem;
+        }
+
+        .forget-pass{
+            float:left;
+            text-decoration: none;
+            color:#6dbd78;
+            font-size:.26rem;
+        }
+
+        .logon-immediately{
+            float:right;
+            text-decoration: none;
+            color:#6dbd78;
+            font-size:.26rem;
+        }
+
+        .button-logo{
+            margin-left:.83rem;
+        }
+        .checkbox-info{
+            box-sizing:border-box;
+            width:5.76rem;
+            height:1rem;
+            margin-left:.83rem;
+            padding-top:.28rem;
+
+        }
+        .checkbox-info input{
+            background-color: #6dbd78;
+        }
+
+        .color-info{
+            color:#6dbd78;
+        }
+        .checkbox-1{
+            display:none;
+        }
+
+        .checkbox-1:checked+label{
+            background: url("img/choose.png")no-repeat;
+            display:inline-block;
+            width:.42rem;
+            height:.42rem;
+            background-size:.42rem .42rem;
+            vertical-align: middle;
+
+        }
+
+        .checkbox-1-label{
+            display:inline-block;
+            width:.42rem;
+            height:.42rem;
+            background: url("img/not-choose.png")no-repeat;
+            background-size:.42rem .42rem;
+            vertical-align: middle;
+        }
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+
+<div class="company-logo">
+    <img src="img/logo.png" alt="">
+</div>
+
+<div class="logo-info">
+    <input  class="info-input info-input-usr" type="text" placeholder="请输入手机号">
+    <input  class="info-input info-input-pass" type="password" placeholder="请输入密码">
+    <div class="password-info">
+        <a class="forget-pass" href="">忘记密码?</a>
+        <a class="logon-immediately" href="register01.html">立即注册</a>
+    </div>
+    <a href="person-login.html"><input class="button-lg button-logo" type="button" value="登录"></a>
+    <div class="checkbox-info">
+        <input class="checkbox-1" type="checkbox" id="checkbox-conform">
+        <label class="checkbox-1-label" for="checkbox-conform"></label>
+        <span>已认真阅读并同意 <span class="color-info"><<相关协议>></span></span>
+    </div>
+</div>
+
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function($){
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function(){
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+
+    })
+
+</script>
+
+</body>
+</html>

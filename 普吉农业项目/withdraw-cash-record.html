@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+        .withdraw-cash-content {
+            position: absolute;
+            top: .96rem;
+            left: 0;
+            width: 100%;
+            /*padding-top: .2rem;*/
+            font-size: .28rem;
+        }
+
+        .withdraw-cash {
+            list-style-type: none;
+        }
+
+        .withdraw-cash-li {
+            position:relative;
+            height: 1.05rem;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .withdraw-cash-title{
+            position:absolute;
+            left: .2rem;
+            top: .2rem;
+            font-size:.26rem;
+            font-weight:bold;
+        }
+
+        .withdraw-cash-balance-title,
+        .withdraw-cash-balance-time{
+            font-size:.2rem;
+            color:#aaa;
+        }
+
+        .withdraw-cash-balance-title{
+            position: absolute;
+            left: .2rem;
+            bottom: .2rem;
+        }
+
+        .withdraw-cash-balance-time{
+            position:absolute;
+            top: .2rem;
+            right: .2rem;
+        }
+
+        .withdraw-cash-item{
+            position:absolute;
+            right:.2rem;
+            bottom:.2rem;
+            font-size:.26rem;
+            font-weight:bold;
+            color: #6dbd78;
+
+        }
+
+        .withdraw-cash-item span{
+            font-size:.26rem;
+            font-weight:bold;
+            color: #6dbd78;
+        }
+
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="my-commission.html" class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">提现记录</span><i></i>
+</div>
+
+<div class="withdraw-cash-content">
+    <ul class="withdraw-cash">
+        <li class="withdraw-cash-li"><span class="withdraw-cash-title">转入余额</span> <span class="withdraw-cash-balance-title">佣金余额：<span
+                class="withdraw-cash-balance">101.50</span></span> <span
+                class="withdraw-cash-balance-time">2016-09-05 07:48</span> <span class="withdraw-cash-item">-16.50<span>元</span> </span></li>
+        <li class="withdraw-cash-li"><span class="withdraw-cash-title">佣金提现</span> <span class="withdraw-cash-balance-title">佣金余额：<span
+                class="withdraw-cash-balance">118.00</span></span> <span
+                class="withdraw-cash-balance-time">2016-09-05 07:16</span> <span class="withdraw-cash-item">-20.50 <span>元</span></span></li>
+    </ul>
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

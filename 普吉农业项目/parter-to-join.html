@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+    .parter-to-join-content{
+        position: absolute;
+        left: 0;
+        top:.96rem;
+        /*text-align: center;*/
+        padding-left:.83rem;
+        padding-top:.3rem;
+        font-size:.32rem;
+    }
+
+    .parter-to-join-content div{
+        margin-top:.2rem;
+    }
+
+    .type-password-2:checked+label{
+        display:inline-block;
+        width:.3rem;
+        height:.3rem;
+        border:1px solid #15ae67;
+        border-radius:50%;
+        background-color: #15ae67;
+        background-clip:content-box;
+        vertical-align: -.05rem;
+    }
+
+    .type-password-1:checked+label{
+        display:inline-block;
+        width:.3rem;
+        height:.3rem;
+        border:1px solid #15ae67;
+        border-radius:50%;
+        background-color: #15ae67;
+        background-clip:content-box;
+        vertical-align: -.05rem;
+    }
+
+
+    .input-common{
+        box-sizing:border-box;
+        width:5.76rem;
+        height:1rem;
+        border:1px solid #6dbd78;
+        border-radius: .05rem;
+        font-size:.32rem;
+    }
+
+
+    .parter-to-join-5{
+        color:#aaaaaa;
+    }
+
+    .parter-to-join-6{
+        color:#aaaaaa;
+    }
+
+    .parter-to-join-conform{
+            background-color: #15ae67;
+            font-size:.42rem;
+            color:#fff;
+            margin-top:.5rem;
+        border:none;
+        outline:none;
+    }
+        .parter-to-join-info{
+            font-size:.20rem;
+            color:#aaaaaa;
+            padding-left:1rem;
+            width:4.76rem;
+        }
+
+        .parter-to-join-place{
+            color:#aaaaaa;
+            line-height:1rem;
+        }
+        .parter-to-join-place select{
+            border: none;
+            background-color: #15ae67;
+            padding-left: .05rem;
+            width: 1.2rem;
+            height: .32rem;
+            font-size:.20rem;
+            border-radius:0;
+        }
+
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="person-login.html" class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">合伙人加盟</span><i></i>
+</div>
+
+<div class="parter-to-join-content">
+
+
+    <div>
+        <input  class="input-common parter-to-join-5" type="text" value="姓名：" placeholder="请输入您的真实姓名">
+    </div>
+    <div>
+        <input  class="input-common parter-to-join-5" type="text" value="手机号：" placeholder="请输入您的手机号">
+    </div>
+    <div>
+        <input  class="input-common parter-to-join-6" type="text" value="公司名称：" placeholder="请输入您的公司名称">
+    </div>
+    <div class="parter-to-join-place input-common">
+        地区：
+        <select>
+        <option value="0" selected="">湖北省</option>
+        <option value="1">湖南省</option>
+        <option value="2">安徽省</option>
+
+    </select>
+
+        <select>
+            <option value="0" selected="">武汉市</option>
+            <option value="1">黄石市</option>
+            <option value="2">襄阳市</option>
+            <option value="3">十堰市</option>
+            <option value="4">宜昌市</option>
+        </select>
+
+        <select>
+            <option value="0" selected="">武昌区</option>
+            <option value="1">硚口区</option>
+            <option value="2">青山区</option>
+            <option value="3">汉阳区</option>
+        </select>
+
+    </div>
+    <div class="parter-to-join-info">
+        注:合伙人加盟需要缴纳100000.00元加盟费用 官方账户 6594857585231698
+    </div>
+
+    <input class="input-common parter-to-join-conform" type="button" value="提交">
+
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+        //点击提交按钮
+
+        $('.parter-to-join-conform').tap(function(){
+
+
+
+            window.location.href='parter-to-join-success.html'
+        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

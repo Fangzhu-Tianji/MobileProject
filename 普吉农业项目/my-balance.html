@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+
+        .top-balance-content{
+            position:relative;
+            /*padding-top:.1rem;*/
+        }
+
+        .top-balance-title{
+            position:absolute;
+            left:.3rem;
+            top:.2rem;
+            font-size:.28rem;
+            color:#fff;
+        }
+
+        .top-balance{
+            position:absolute;
+            left:.3rem;
+            top:1.4rem;
+            font-size:.72rem;
+            color:#fff;
+            vertical-align: bottom;
+
+        }
+
+        .balance-li{
+            padding-left:.2rem;
+            height: .66rem;
+            line-height: .66rem;
+
+        }
+        .top-balance-button{
+            position:absolute;
+            right:.3rem;
+            bottom:.6rem;
+            font-size:.28rem;
+            width:1.8rem;
+            height: .68rem;
+            border-radius:.2rem;
+            background-color: #fff;
+            border:none;
+            outline:none;
+            color:#6dbd78;
+            font-weight:bold;
+        }
+
+        .balance-content{
+            position: absolute;
+            top: 3.88rem;
+            left: 0;
+            width: 100%;
+        }
+
+        .balance-enter{
+            width: .32rem;
+            height: .24rem;
+            float: right;
+            padding:.2rem .2rem 0 0;
+        }
+        .balance{
+            list-style-type:none;
+            font-size:.26rem;
+        }
+        .balance-li{
+            border-bottom:1px solid #e6e6e6;
+        }
+        .balance-li a{
+            text-decoration:none;
+            display:block;
+            color:#808080;
+        }
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a class="" href="person-login.html"><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">我的余额</span><i></i>
+</div>
+
+<div class="top top-balance-content">
+    <span class="top-balance-title">账户余额(元)</span>
+    <span class="top-balance">20000.00</span>
+    <a href="balance-recharge.html"><input class="top-balance-button" type="button" value="余额充值"></a>
+</div>
+
+<div class="balance-content">
+    <ul class="balance">
+        <li class="balance-li"><a href="recharge-record.html"><span>充值记录</span><img class="balance-enter" src="img/enter.png" alt=""></a></li>
+        <li class="balance-li"><a href="balance-detail.html"> <span>余额明细</span><img class="balance-enter" src="img/enter.png" alt=""></a></li>
+    </ul>
+</div>
+
+<div class="footer">
+    <ul>
+        <li><a href=""><img src="img/home-gray.png"><span>首页</span></a></li>
+        <li><a href=""><img src="img/message-gray.png"><span>信息</span></a></li>
+        <li><a href=""><img src="img/shopping-cart-gray.png"><span>购物车</span></a></li>
+        <li><a href=""><img src="img/person-light.png"><span>我的</span></a></li>
+    </ul>
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

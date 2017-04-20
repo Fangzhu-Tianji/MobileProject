@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+        .footer-my{
+            color:#6dbd78;
+        }
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a class=""><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">个人中心</span><i></i>
+    <a class=""><img src="img/share.png" class="h-top-right"></a>
+</div>
+
+<div class="top top-person-infos">
+    <div class="top-outer">
+        <img src="img/person-white.png" class="top-person">
+    </div>
+    <div class="member ">
+        <div class="member-logo"><img src="img/Diamonds.png" alt=""><span>钻卡会员</span></div>
+        <div class="member-info">
+            <span class="member-name">工藤新一</span>
+            <img  class="member-sex" src="img/man.png" alt="">
+            <span class="member-address">湖北武汉</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="content">
+    <div class="box"><a href="member-upgrade.html" style="background-color: #fcbe03;"><img src="img/upgrade.png"></a><span>会员升级</span>
+    </div>
+    <div class="box"><a href="my-balance.html" style="background-color: #10aaef;"><img src="img/balance.png"></a><span>我的余额</span>
+    </div>
+    <div class="box"><a href="" style="background-color: #00cf78"><img src="img/Recommend.png"></a><span>我的推荐</span>
+    </div>
+    <div class="box"><a href="parter-to-join.html" style="background-color: #f95b2b;"><img src="img/cooperation.png"></a><span>合伙人加盟</span>
+    </div>
+    <div class="box"><a href="my-commission.html" style="background-color: #1ad1b9;"><img src="img/Commission.png"></a><span>我的佣金</span>
+    </div>
+    <div class="box"><a href="" style="background-color: #10aaef;"><img src="img/Order.png"></a><span>我的订单</span>
+    </div>
+</div>
+
+<div class="footer">
+    <ul>
+        <li><a href="index.html"><img src="img/home-gray.png"><span>首页</span></a></li>
+        <li><a href=""><img src="img/message-gray.png"><span>信息</span></a></li>
+        <li><a href=""><img src="img/shopping-cart-gray.png"><span>购物车</span></a></li>
+        <li><a href=""><img src="img/person-light.png"><span class="footer-my">我的</span></a></li>
+    </ul>
+</div>
+
+<!--遮罩-->
+<div class="overlay p-l-overlay">
+
+</div>
+<!-- 分享到 -->
+<div class="share">
+    <span class="share-title">分享到</span>
+    <span class="close" id="close"><img src="img/close.png" alt=""></span>
+    <div class="share-box">
+        <ul>
+            <li><a href=""><img src="img/QQ.png"><span>QQ好友</span></a></li>
+            <li><a href=""><img src="img/QQ-Zone.png"><span>QQ空间</span></a></li>
+            <li><a href=""><img src="img/Wechat.png"><span>微信好友</span></a></li>
+            <li><a href=""><img src="img/wechat-share.png"><span>微信朋友圈</span></a></li>
+            <li><a href=""><img src="img/weibo.png"><span>新浪微博</span></a></li>
+            <li><a href=""><img src="img/tenxun-weibo.png"><span>腾讯微博</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function($){
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+        $('.h-top-right').tap(function(){
+            $('#close').parent().show();
+            $('.p-l-overlay').show();
+        })
+
+        //关闭分享界面
+        $('#close').tap(function(){
+            $(this).parent().hide()
+            $('.p-l-overlay').hide();
+
+        })
+
+        //点击 图像及个人信息区域 跳转到个人中心资料页
+        $('.top-person-infos').tap(function(){
+            console.log('1111')
+            window.location.href = 'person-center.html'
+        })
+
+    })
+
+</script>
+
+</body>
+</html>

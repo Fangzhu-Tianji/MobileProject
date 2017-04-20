@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+        .content-service{
+            box-sizing:border-box;
+            position: absolute;
+            top: .96rem;
+            left: 0;
+            width: 100%;
+            font-size:.28rem;
+            padding-top:.4rem;
+
+            text-align:center;
+        }
+
+        .content-service img{
+            width: 2.55rem;
+            height:1.32rem;
+        }
+
+        .service-button{
+            margin-top:3.5rem;
+        }
+
+        .version-1{
+            margin-top:1rem;
+            margin-bottom:.7rem;
+            font-size:.28rem;
+            color:#6dbd78;
+        }
+        .version-2{
+            margin-top:.7rem;
+            margin-left:1.2rem;
+            font-size:.36rem;
+            color:#808080;
+            text-align:left;
+        }
+        .version-3{
+            margin-top:.5rem;
+            margin-left:1.2rem;
+            text-align:left;
+            font-size:.28rem;
+            color:#aaaaaa;
+        }
+
+
+    </style>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a href="person-center.html"><img src="img/back.png" class="h-top-left "></a>
+    <span class="h-top-title">版本更新</span><i></i>
+</div>
+
+<div class="content-service">
+
+    <div class="version-1">检测到最新版本（V2.0.1_2016.1230）</div>
+    <img src="img/logo.png" alt="">
+    <div class="version-2">更新内容：</div>
+    <div class="version-3">商品页面、订单、会员管理等</div>
+    <input class="button-lg  service-button" type="button" value="更新">
+</div>
+
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+
+    })
+
+</script>
+
+</body>
+</html>

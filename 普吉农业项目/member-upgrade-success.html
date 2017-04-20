@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+
+        .m-upgrade-success {
+            position:absolute;
+            left: 0;
+            top:.96rem;
+            width:100%;
+            text-align:center;
+            padding-top:1rem;
+        }
+
+        .m-upgrade-success img{
+            /*text-align: center;*/
+            display: inline-block;
+            width:1.28rem;
+            height:1.28rem;
+        }
+
+        .m-upgrade-success span{
+            display:block;
+            margin-top:.30rem;
+            margin-bottom:1.2rem;
+            font-size:.32rem;
+            color:#6dbd78;
+
+        }
+
+        .m-s-button{
+            width: 5.76rem;
+            height:1rem;
+            border-radius:.05rem;
+            font-size:.48rem;
+            background-color: #15ae67;
+            border:none;
+            outline:none;
+            color:#fff;
+        }
+
+
+
+    </style>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <span class="h-top-title">升级成功</span><i></i>
+</div>
+
+<div class="m-upgrade-success">
+    <div>
+        <img src="img/tijiao.png" alt="">
+    </div>
+    <span>恭喜您，成功升级为钻卡会员！</span>
+    <a href="member-upgrade.html"><input class="m-s-button" type="button" value="返回"></a>
+
+</div>
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function($){
+//        alert('Ready to Zepto!')
+
+        //
+//        $('.confirm-button').tap(function(){
+//            console.log("hello")
+//        })
+//
+
+    })
+</script>
+
+</body>
+</html>

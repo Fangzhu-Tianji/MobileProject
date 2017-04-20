@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <style>
+
+        .top-commission-content{
+            position:relative;
+            /*padding-top:.1rem;*/
+        }
+
+        .top-commission-title{
+            position:absolute;
+            left:.3rem;
+            top:.2rem;
+            font-size:.28rem;
+            color:#fff;
+        }
+
+        .top-commission-title-2{
+            position:absolute;
+            left:.3rem;
+            top:1rem;
+            font-size:.28rem;
+            color:#fff;
+        }
+
+        .top-commission{
+            position:absolute;
+            left:.3rem;
+            top:1.4rem;
+            font-size:.72rem;
+            color:#fff;
+            vertical-align: bottom;
+
+        }
+
+        .commission-li{
+            padding-left:.2rem;
+            height: .66rem;
+            line-height: .66rem;
+
+        }
+        .top-commission-button{
+            position:absolute;
+            right:.3rem;
+            bottom:.6rem;
+            font-size:.28rem;
+            width:1.8rem;
+            height: .68rem;
+            border-radius:.2rem;
+            background-color: #fff;
+            border:none;
+            outline:none;
+            color:#6dbd78;
+            font-weight:bold;
+        }
+
+        .commission-content{
+            position: absolute;
+            top: 3.88rem;
+            left: 0;
+            width: 100%;
+        }
+
+        .commission-enter{
+            width: .32rem;
+            height: .24rem;
+            float: right;
+            padding:.2rem .2rem 0 0;
+        }
+        .commission{
+            list-style-type:none;
+            font-size:.26rem;
+        }
+        .commission-li{
+            border-bottom:1px solid #e6e6e6;
+        }
+        .commission-li a{
+            text-decoration:none;
+            display:block;
+            color:#808080;
+        }
+
+        .top-commission-withdraw-cash{
+            position:absolute;
+            right:.7rem;
+            bottom:.2rem;
+            font-size:.26rem;
+            color:#fff;
+        }
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top">
+    <a class="" href="person-login.html"><img src="img/back.png" class="h-top-left"></a>
+    <span class="h-top-title">我的佣金</span><i></i>
+</div>
+
+<div class="top top-commission-content">
+    <span class="top-commission-title">累计佣金101.50(元)</span>
+    <span class="top-commission-title-2">可提现佣金(元)</span>
+    <span class="top-commission">101.00</span>
+    <a href="commission-recharge.html"><input class="top-commission-button" type="button" value="转入余额"></a>
+    <a href="" class="top-commission-withdraw-cash">佣金提现</a>
+</div>
+
+<div class="commission-content">
+    <ul class="commission">
+        <li class="commission-li"><a href="withdraw-cash-record.html"><span>提现记录</span><img class="commission-enter" src="img/enter.png" alt=""></a></li>
+        <li class="commission-li"><a href="commission-detail.html"> <span>佣金明细</span><img class="commission-enter" src="img/enter.png" alt=""></a></li>
+    </ul>
+</div>
+
+<div class="footer">
+    <ul>
+        <li><a href=""><img src="img/home-gray.png"><span>首页</span></a></li>
+        <li><a href=""><img src="img/message-gray.png"><span>信息</span></a></li>
+        <li><a href=""><img src="img/shopping-cart-gray.png"><span>购物车</span></a></li>
+        <li><a href=""><img src="img/person-light.png"><span>我的</span></a></li>
+    </ul>
+</div>
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function ($) {
+//        alert('Ready to Zepto!')
+
+        //弹出分享界面
+//        $('.h-top-right').tap(function () {
+//            $('#close').parent().show();
+//            $('.p-l-overlay').show();
+//        })
+
+
+    })
+
+</script>
+
+</body>
+</html>

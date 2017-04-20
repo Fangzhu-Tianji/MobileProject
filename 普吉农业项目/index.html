@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=0"/>
+    <title>普吉农业-个人中心</title>
+    <link rel="stylesheet" href="css/myStyle.css">
+    <link rel="stylesheet" href="css/swiper-3.4.0.min.css">
+    <style>
+        .h-top-index{
+            box-sizing:border-box;
+            display:inline-block;
+            line-height:.96rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: .96rem;
+            background-color: #15ae67;
+            text-align: center;
+            font-size:.28rem;
+        }
+
+        .top-index-span{
+            color: #fff;
+            position:absolute;
+            left:.5rem;
+        }
+
+       .h-top-input{
+           height:.52rem;
+           width:4.5rem;
+           border-radius: .5rem;
+           border:none;
+           outline:none;
+           text-indent:.2rem;
+           margin-left:.2rem;
+
+       }
+
+        .top-banner {
+            position: absolute;
+            left: 0;
+            top: .96rem;
+            width: 100%;
+            box-sizing: border-box;
+            height: 2.16rem;
+        }
+
+        /*更改banner轮播控制*/
+        .swiper-pagination {
+            text-align: right;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #00ff89;
+        }
+
+        .swiper-container{
+            width:100%;
+            height:2.16rem;
+        }
+
+        .swiper-slide {
+            width:100%;
+            height:2.16rem;
+            text-align: center;
+        }
+        .swiper-slide img{
+            width: 7.5rem;
+            height: 2.16rem;
+        }
+
+        .index-list{
+            position:absolute;
+            left: 0;
+            top:3.12rem;
+            height:.7rem;
+            line-height:.7rem;
+            width:100%;
+            font-size:.26rem;
+            border-bottom:1px solid #6dbd78;
+        }
+
+        .list-default{
+            display:inline-block;
+            width:50%;
+            text-align:center;
+            border-right:1px solid #6dbd78;
+
+        }
+
+        .list-category{
+            display:inline-block;
+            margin-left:1.29rem;
+
+        }
+
+        .list-category img{
+            width:.32rem;
+            height:.32rem;
+            vertical-align: middle;
+
+        }
+
+
+        .index-content{
+            position: absolute;
+            left: 0;
+            width:100%;
+            height:8.55rem;
+            top:3.83rem;
+            font-size:.20rem;
+            overflow-x: auto;
+        }
+        .index-content ul{
+            list-style-type:none;
+        }
+
+        .li-list{
+            position: relative;
+            height:2.14rem;
+            border-bottom:1px solid #e6e6e6;
+        }
+
+        .li-list-info{
+            position:absolute;
+            left:51%;
+            top:.3rem;
+        }
+
+        .li-list-price{
+            position:absolute;
+            left:51%;
+            bottom:.5rem;
+            font-size:.28rem;
+            color:#6dbd78;
+        }
+
+        .index-content img{
+            width:2.87rem;
+            height:1.97rem;
+        }
+
+        .footer-index{
+            color:#6dbd78;
+        }
+
+    </style>
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper-3.4.0.jquery.min.js"></script>
+    <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+    </script>
+</head>
+<body>
+<div class="h-top-index">
+    <span class="top-index-span">地区</span>
+    <input class="h-top-input" type="text" placeholder="请输入关键字">
+    <img class="h-top-right index-search" src="img/search.png" alt="">
+</div>
+
+<div class="top-banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/banner1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/banner2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/banner3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/banner4.jpg" alt=""></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<div class="index-list">
+<span class="list-default">默认</span>
+<span class="list-category">分类 <img  src="img/Under-arrow-small.png" alt=""></span>
+</div>
+
+<div class="index-content">
+    <ul>
+        <li class="li-list"><img src="img/example1.jpg" alt=""><span class="li-list-info">海南小紫薯</span><span class="li-list-price">￥43.00</span></li>
+        <li class="li-list"><img src="img/example2.jpg" alt=""><span class="li-list-info">西北水果黄瓜 5-6个 约500g 小乳瓜蔬菜 新鲜蔬果配送 茄果瓜类</span><span class="li-list-price">￥16.90</span></li>
+        <li class="li-list"><img src="img/example3.jpg" alt=""><span class="li-list-info">西北土豆</span><span class="li-list-price">￥4.90</span></li>
+        <li class="li-list"><img src="img/example4.jpg" alt=""><span class="li-list-info">西北西红柿</span><span class="li-list-price">￥9.90</span></li>
+        <li class="li-list"><img src="img/example1.jpg" alt=""><span class="li-list-info">海南小紫薯</span><span class="li-list-price">￥43.00</span></li>
+        <li class="li-list"><img src="img/example2.jpg" alt=""><span class="li-list-info">西北水果黄瓜</span><span class="li-list-price">￥16.90</span></li>
+        <li class="li-list"><img src="img/example3.jpg" alt=""><span class="li-list-info">西北土豆</span><span class="li-list-price">￥4.90</span></li>
+        <li class="li-list"><img src="img/example4.jpg" alt=""><span class="li-list-info">西北西红柿</span><span class="li-list-price">￥9.90</span></li>
+    </ul>
+</div>
+
+<div class="footer">
+    <ul>
+        <li><a href=""><img src="img/home.png"><span class="footer-index">首页</span></a></li>
+        <li><a href=""><img src="img/message-gray.png"><span>信息</span></a></li>
+        <li><a href=""><img src="img/shopping-cart-gray.png"><span>购物车</span></a></li>
+        <li><a href="person-nologin.html"><img src="img/person-gray.png"><span class="footer-my">我的</span></a></li>
+    </ul>
+</div>
+
+
+
+<script>
+    // 当页面ready的时候，执行回调:
+    Zepto(function($){
+//        alert('Ready to Zepto!')
+
+        //banner幻灯片自动播放
+        var mySwiper = new Swiper ('.swiper-container', {
+            loop: true,
+            autoplay:3000,
+            pagination: '.swiper-pagination',
+
+        })
+
+        //点击 search 搜索
+        $('.index-search').tap(function(){
+
+            console.log('1')
+
+            //搜索功能代码
+
+        })
+
+    })
+
+</script>
+
+</body>
+</html>
